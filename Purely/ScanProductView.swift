@@ -32,11 +32,11 @@ struct ScanProductView: View {
                     }
                     .padding()
                     
-                    Spacer()
+                   // Spacer()
                     
                     Text("Find a code to scan")
                         .padding()
-                        .background(Color.black.opacity(0.7))
+                        .background(Color.black.opacity(0.3))
                         .foregroundColor(.white)
                         .cornerRadius(10)
                     
@@ -48,7 +48,7 @@ struct ScanProductView: View {
                         Image(systemName: scannerViewModel.isFlashOn ? "flashlight.on.fill" : "flashlight.off.fill")
                             .font(.title)
                             .padding()
-                            .background(Color.black.opacity(0.7))
+                            .background(Color.black.opacity(0.3))
                             .clipShape(Circle())
                             .foregroundColor(.white)
                     }
@@ -164,3 +164,7 @@ struct ScanProductView: View {
         }
     }
 }
+#Preview {
+    ScanProductView()
+}
+
