@@ -15,7 +15,7 @@ struct OnboardingView: View {
 
     var body: some View {
         if hasCompletedOnboarding {
-            ContentView() // Redirect to main content if onboarding is completed
+            HomeView() // Redirect to main content if onboarding is completed
         } else {
             ZStack {
                 // Background Color Covering Full Screen

@@ -9,14 +9,16 @@ import Foundation
 import Foundation
 import SwiftUI
 
+import SwiftUI
+
 struct SplashScreen: View {
     @State private var isActive = false
+    @State private var currentPage = 0 // متغير لمتابعة الصفحة الحالية في WelcomePage
     
     var body: some View {
         ZStack {
             if isActive {
-                // هنا يمكنك وضع محتوى التطبيق الرئيسي
-                MainContentView() // Ensure this struct exists
+                WelcomePage(currentPage: $currentPage) // انتقال إلى WelcomePage
             } else {
                 VStack {
                     Spacer()
@@ -28,15 +30,12 @@ struct SplashScreen: View {
                         .frame(width: 300, height: 300) // حجم الشعار
                         .padding()
                     
-                    // يمكنك إضافة نص أو أي عنصر آخر في الأسفل
-                
-                    
                     Spacer()
                 }
                 .background(Color.white) // لون الخلفية
                 .edgesIgnoringSafeArea(.all)
                 .onAppear {
-                    // تأخير لمدة 2 ثانية قبل الانتقال للمحتوى الرئيسي
+                    // تأخير لمدة 2 ثانية قبل الانتقال لصفحة الترحيب
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         withAnimation {
                             self.isActive = true
@@ -48,17 +47,11 @@ struct SplashScreen: View {
     }
 }
 
-struct MainContentView: View {
-    var body: some View {
-        // هذا هو المحتوى الرئيسي بعد الانتقال
-        Text("Main content goes here!")
-            .font(.largeTitle)
-            .padding()
-    }
-}
-
+// معاينة
 struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {
         SplashScreen()
     }
 }
+
+

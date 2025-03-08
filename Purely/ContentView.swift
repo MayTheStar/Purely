@@ -60,7 +60,7 @@ struct WelcomePage: View {
                 Text("Get Started")
                     .fontWeight(.bold)
                     .frame(width: 200, height: 50)
-                    .background(Color.green)
+                    .background(Color.accentColor)
                     .foregroundColor(.white)
                     .cornerRadius(1900)
             }
@@ -225,22 +225,22 @@ struct SkinTypesView: View {
     }
 }
 
-struct OnboardingView_Previews: PreviewProvider {
+struct OnboardingView1_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingView1()
     }
 }
 
-        NavigationStack{
-            Text("Main App Content")
-                .font(.largeTitle)
-                .padding()
-            Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/NavigationLink(destination : OnboardingView()){
-                    
-                }
-            }
-        }
-    }
-}
+//        NavigationStack{
+//            Text("Main App Content")
+//                .font(.largeTitle)
+//                .padding()
+//            Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
+//                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/NavigationLink(destination : OnboardingView()){
+//                    
+//                }
+//            }
+//        }
+//    }
+//}
 
