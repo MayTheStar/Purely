@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnboardingView: View {
+struct OnboardingView1: View {
     @State private var currentPage = 0
     @AppStorage("hasShownOnboarding") private var hasShownOnboarding = false
 
@@ -33,6 +33,7 @@ struct WelcomePage: View {
     @Binding var currentPage: Int
 
     var body: some View {
+
         VStack {
             Image("logo")
                 .resizable()
@@ -226,6 +227,20 @@ struct SkinTypesView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView1()
     }
 }
+
+        NavigationStack{
+            Text("Main App Content")
+                .font(.largeTitle)
+                .padding()
+            Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
+                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/NavigationLink(destination : OnboardingView()){
+                    
+                }
+            }
+        }
+    }
+}
+
