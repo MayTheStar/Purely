@@ -11,7 +11,7 @@ import SwiftUI
 struct PurelyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingView() // Change this to OnboardingView
         }
     }
 }
