@@ -39,8 +39,8 @@ struct WelcomeView: View {
             }) {
                 Text("Get Started")
                     .fontWeight(.bold)
-                    .frame(width: 200, height: 50)
-                    .background(Color.green) // لون الخلفية
+                    .frame(width: 300, height: 50)
+                    .background(Color.accentColor) // لون الخلفية
                     .foregroundColor(.white) // لون النص
                     .cornerRadius(1900) // الزوايا الدائرية
             }

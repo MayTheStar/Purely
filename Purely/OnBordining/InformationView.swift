@@ -114,7 +114,7 @@ struct InformationView: View {
                     .font(.headline)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color(UIColor.systemGreen))
+                    .background(Color(UIColor.accent))
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .padding(.horizontal, 30)

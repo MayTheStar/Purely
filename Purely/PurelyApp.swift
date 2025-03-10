@@ -12,7 +12,7 @@ struct PurelyApp: App {
     var body: some Scene {
         WindowGroup {
 
-            OnboardingView1() // Change this to OnboardingView
+            OnboardingView() // Change this to OnboardingView
 
 //             OnboardingView()
 

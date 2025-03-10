@@ -184,7 +184,7 @@ struct SkinTypeView: View {
     }
 }
 
-struct SkinTypeOption: View {
+struct skinTypeOption: View {
     let iconName: String
     let title: String
     let description: String
