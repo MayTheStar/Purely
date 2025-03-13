@@ -167,7 +167,7 @@ struct SkinTypeView: View {
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color(UIColor.systemGreen))
+                        .background(Color.accent)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }

@@ -543,57 +543,164 @@ struct WelcomePage: View {
     }
 }
 
+//struct InformationPage: View {
+//    @Binding var currentPage: Int
+//    @State private var name: String = ""
+//    @State private var birthday: String = ""
+////
+////    var body: some View {
+////        VStack(spacing: 20) {
+////            Spacer()
+////
+////            Image("women")
+////                .resizable()
+////                .scaledToFit()
+////                .frame(height: 200)
+////
+////            Text("Are you ready to shine? Let us know you")
+////                .font(.title3)
+////                .fontWeight(.light)
+////                .foregroundColor(.black)
+////                .multilineTextAlignment(.center)
+////                .padding(.horizontal)
+////
+////            VStack(alignment: .leading, spacing: 10) {
+////                Text("What is your Name?")
+////                    .font(.subheadline)
+////                TextField("Enter your name", text: $name)
+////                    .textFieldStyle(RoundedBorderTextFieldStyle())
+////                    .frame(height: 50)
+////
+////                Text("What is your Birthday?")
+////                    .font(.subheadline)
+////                TextField("Enter your birthday", text: $birthday)
+////                    .textFieldStyle(RoundedBorderTextFieldStyle())
+////                    .frame(height: 50)
+////            }
+////            .padding(.horizontal, 30)
+////
+////            Button(action: {
+////                currentPage = 2 // Move to the next page
+////            }) {
+////                Text("Next")
+////                    .font(.headline)
+////                    .frame(maxWidth: .infinity)
+////                    .padding()
+////                    .background(Color.green)
+////                    .foregroundColor(.white)
+////                    .cornerRadius(10)
+////                    .padding(.horizontal, 30)
+////            }
+//
+//    var body: some View {
+//        VStack {
+//            Spacer()
+//
+//            Image("women") // Replace with your actual asset name
+//                .resizable()
+//                .scaledToFit()
+//                .frame(width: 200, height: 200)
+//
+//            Text("Let us know you")
+//                .font(.title)
+//                .fontWeight(.bold)
+//                .foregroundColor(.black)
+//                .padding(.top, 20)
+//
+//            VStack(alignment: .leading) {
+//                Text("What is your Name?")
+//                    .foregroundColor(.gray)
+//
+//                TextField("", text: $name)
+//                    .padding(.vertical, 10)
+//                    .overlay(Rectangle().frame(height: 1).foregroundColor(.gray), alignment: .bottom)
+//            }
+//            .frame(width: 300)
+//            .padding(.top, 50)
+//
+//            Button(action: {
+//                // Handle button action, could be to validate or continue
+//            }) {
+//                Text("Next")
+//                    .fontWeight(.bold)
+//                    .frame(maxWidth: .infinity)
+//                    .padding()
+//                    .background(Color(.accent).opacity(0.7))
+//                    .foregroundColor(.black)
+//                    .cornerRadius(10)
+//            }
+//            .frame(width: 300)
+//            .padding(.top, 50)
+//
+//            Spacer()
+//        }
+//        .padding()
+//    }
+//}
+//            Spacer()
+//        }
+//    }
+//}
+
 struct InformationPage: View {
     @Binding var currentPage: Int
     @State private var name: String = ""
     @State private var birthday: String = ""
-
+    
     var body: some View {
-        VStack(spacing: 20) {
+        VStack {
             Spacer()
-
-            Image("women")
+            
+            Image("women") // Ensure the image exists in assets
                 .resizable()
                 .scaledToFit()
-                .frame(height: 200)
-
-            Text("Are you ready to shine? Let us know you")
-                .font(.title3)
-                .fontWeight(.light)
+                .frame(width: 200, height: 200)
+            
+            Text("Let us know you")
+                .font(.title)
+                .fontWeight(.bold)
                 .foregroundColor(.black)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-
-            VStack(alignment: .leading, spacing: 10) {
+                .padding(.top, 20)
+            
+            VStack(alignment: .leading) {
                 Text("What is your Name?")
-                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                
                 TextField("Enter your name", text: $name)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(height: 50)
-
-                Text("What is your Birthday?")
-                    .font(.subheadline)
-                TextField("Enter your birthday", text: $birthday)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(height: 50)
+                    .padding(.vertical, 10)
+                    .overlay(Rectangle().frame(height: 1).foregroundColor(.gray), alignment: .bottom)
             }
-            .padding(.horizontal, 30)
-
+            .frame(width: 300)
+            .padding(.top, 20)
+            
+            VStack(alignment: .leading) {
+                Text("What is your Birthday?")
+                    .foregroundColor(.gray)
+                
+                TextField("Enter your birthday", text: $birthday)
+                    .padding(.vertical, 10)
+                    .overlay(Rectangle().frame(height: 1).foregroundColor(.gray), alignment: .bottom)
+            }
+            .frame(width: 300)
+            .padding(.top, 20)
+            
             Button(action: {
-                currentPage = 2 // Move to the next page
+                currentPage = 2 // Navigate to the next page
             }) {
                 Text("Next")
-                    .font(.headline)
+                    .fontWeight(.bold)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.green)
+                    .background(Color.green.opacity(0.7)) // Changed to a valid color
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                    .padding(.horizontal, 30)
             }
-
+            .frame(width: 300)
+            .padding(.top, 50)
+            
             Spacer()
         }
+        .padding()
     }
 }
 
@@ -644,7 +751,7 @@ struct TypesOfSkin: View {
                         .font(.headline)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color(UIColor.systemGreen))
+                        .background(Color.accent)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
